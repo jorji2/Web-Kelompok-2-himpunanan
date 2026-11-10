@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Himpunan | Kelompok 2 Matematika Diskret</title><style> html{scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0;background:#fff}
+.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:10px 5vw;padding-top:calc(10px + env(safe-area-inset-top,0px));background:#14213d;font-family:system-ui,sans-serif}
+.top b{color:#ffd166;font-size:1.15rem}.top a{color:#fff;text-decoration:none;margin-left:6px;padding:7px 14px;border-radius:20px}
+.top a.on{background:#ffd166;color:#14213d;font-weight:700}.view{display:none;min-height:100vh}.view.show{display:block}
+#v-beranda{--ink:#10304a;--teal:#0a7a6f;--sun:#f2b134;--paper:#f6fbf9;--line:#cfe3dd}#v-beranda *{box-sizing:border-box;margin:0}#v-beranda{font-family:Georgia,"Times New Roman",serif;background:var(--paper);color:var(--ink);line-height:1.6}#v-beranda .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:var(--ink);flex-wrap:wrap;gap:8px}#v-beranda .nav a{color:#fff;text-decoration:none;margin-left:20px;font-family:system-ui,sans-serif}#v-beranda .nav .brand{font-weight:700;font-size:1.2rem;margin:0;color:var(--sun)}#v-beranda .nav a:hover{text-decoration:underline}#v-beranda .hero{display:flex;align-items:center;justify-content:center;gap:6vw;padding:8vh 6vw;flex-wrap:wrap;background:linear-gradient(135deg,#e3f4ef,#fff)}#v-beranda .venn{position:relative;width:300px;height:200px}#v-beranda .c{position:absolute;top:0;width:190px;height:190px;border-radius:50%;display:flex;align-items:center;font:700 2rem system-ui;color:var(--ink);mix-blend-mode:multiply}#v-beranda .a{left:0;background:#7fd3c4;padding-left:35px}#v-beranda .b{right:0;background:#f7d27a;justify-content:flex-end;padding-right:35px}#v-beranda .hero-text{max-width:460px}#v-beranda .tag{font-family:system-ui;color:var(--teal);font-weight:600}#v-beranda h1{font-size:clamp(3rem,9vw,5.5rem);line-height:1}#v-beranda .lead{margin:14px 0;font-size:1.15rem}#v-beranda .by{margin-bottom:22px}#v-beranda .btn{display:inline-block;background:var(--teal);color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-family:system-ui;font-weight:600}#v-beranda .btn:hover{background:var(--ink)}#v-beranda .btn.alt{background:var(--sun);color:var(--ink)}#v-beranda .wrap{max-width:900px;margin:auto;padding:40px 6vw}#v-beranda h2{margin-bottom:16px}#v-beranda .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;padding-left:0;list-style:none;counter-reset:n}#v-beranda .toc li{counter-increment:n;background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);padding:10px 14px}#v-beranda .toc li::before{content:counter(n)". ";font-weight:700;color:var(--teal)}#v-beranda .toc a{color:var(--ink);text-decoration:none}#v-beranda .toc a:hover{text-decoration:underline}#v-beranda .cta{margin-top:40px;background:var(--ink);color:#fff;padding:28px;border-radius:14px}#v-beranda .cta p{margin-bottom:16px}#v-beranda footer{text-align:center;padding:24px;font-family:system-ui;font-size:.9rem;color:#567}@media(prefers-reduced-motion:no-preference){#v-beranda .hero-text{animation:in .8s both}@keyframes in{from{opacity:0;transform:translateY(14px)}}}#v-materi{--bg:#fffaf0;--ink:#2b2118;--rust:#a8431f;--card:#fff;--line:#e6d9c3}#v-materi *{box-sizing:border-box;margin:0}#v-materi{scroll-behavior:smooth}#v-materi{font-family:Georgia,serif;background:var(--bg);color:var(--ink);line-height:1.75}#v-materi .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:var(--ink);flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:5}#v-materi .nav a{color:#fff;text-decoration:none;margin-left:18px;font-family:system-ui,sans-serif}#v-materi .nav .brand{margin:0;font-weight:700;color:#f0c987}#v-materi .layout{display:grid;grid-template-columns:250px 1fr;max-width:1150px;margin:auto}#v-materi .side{position:sticky;top:52px;align-self:start;height:calc(100vh - 52px);overflow:auto;padding:24px 16px;border-right:1px solid var(--line);font-family:system-ui,sans-serif}#v-materi .side h3{margin-bottom:10px}#v-materi .side ul{list-style:none;padding:0}#v-materi .side a{display:block;padding:6px 10px;color:var(--ink);text-decoration:none;border-left:3px solid transparent;font-size:.92rem}#v-materi .side a.on{border-color:var(--rust);color:var(--rust);font-weight:700;background:#fbeee4}#v-materi .doc{padding:30px 5vw 60px;max-width:780px}#v-materi h1{font-size:2.4rem;margin-bottom:10px}#v-materi section{padding:26px 0;border-bottom:1px solid var(--line);scroll-margin-top:60px}#v-materi h2{color:var(--rust);margin-bottom:10px}#v-materi h3{margin:16px 0 4px}#v-materi p{margin-bottom:10px}#v-materi ul{padding-left:22px;margin-bottom:10px}#v-materi .ex{background:var(--card);border-left:4px solid #e0a15b;padding:8px 14px;border-radius:0 8px 8px 0}#v-materi .f{font-family:"Cambria Math",Georgia,serif;font-size:1.1rem;background:#2b2118;color:#fff3dc;padding:8px 14px;border-radius:8px}#v-materi table{border-collapse:collapse;width:100%;margin:8px 0 14px;background:var(--card)}#v-materi td,#v-materi th{border:1px solid var(--line);padding:7px 12px;text-align:left}#v-materi td:first-child{font-weight:700;width:110px}#v-materi th{background:#f4e6cf}#v-materi .op{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 18px 14px;margin-bottom:14px}#v-materi .figs svg{max-width:100%;height:auto;border:1px solid var(--line);background:#fff;margin:6px 8px 0 0}#v-materi .next{display:inline-block;margin-top:24px;background:var(--rust);color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-family:system-ui}@media(max-width:800px){#v-materi .layout{grid-template-columns:1fr}#v-materi .side{display:none}}#v-soal{--bg:#1c1b3a;--card:#fff;--ink:#1c1b3a;--pink:#ff5d8f;--mint:#2ec4a0;--red:#e5484d;--yel:#ffd166}#v-soal *{box-sizing:border-box;margin:0}#v-soal{font-family:system-ui,sans-serif;background:var(--bg);color:#fff;min-height:100vh}#v-soal .nav{display:flex;justify-content:space-between;padding:14px 5vw;flex-wrap:wrap;gap:8px;border-bottom:1px solid #ffffff22}#v-soal .nav a{color:#fff;text-decoration:none;margin-left:18px}#v-soal .nav .brand{margin:0;font-weight:800;color:var(--yel)}#v-soal .stage{max-width:760px;margin:auto;padding:30px 5vw 60px}#v-soal .head{text-align:center;margin-bottom:22px}#v-soal .head h1{font-size:2rem;margin-bottom:8px}#v-soal .head p{opacity:.85;font-size:.95rem}#v-soal code{background:#ffffff22;padding:1px 6px;border-radius:4px}#v-soal .bar{height:8px;background:#ffffff22;border-radius:8px;margin:14px 0 4px;overflow:hidden}#v-soal #fill{height:100%;width:0;background:var(--mint);transition:width .3s}#v-soal .q{background:var(--card);color:var(--ink);border-radius:16px;padding:18px 20px;margin-bottom:16px;border:3px solid transparent}#v-soal .q .tipe{display:inline-block;font-size:.78rem;background:var(--ink);color:#fff;padding:2px 10px;border-radius:20px;margin-bottom:8px}#v-soal .q p{font-size:1.05rem;margin-bottom:10px;font-weight:600}#v-soal .opt{display:block;padding:9px 12px;border:2px solid #d9d9ee;border-radius:10px;margin-bottom:7px;cursor:pointer}#v-soal .opt:hover{border-color:var(--pink)}#v-soal .opt input{margin-right:8px}#v-soal .q input[type=text]{width:100%;padding:10px;font-size:1rem;border:2px solid #d9d9ee;border-radius:10px}#v-soal .q.benar{border-color:var(--mint)}#v-soal .q.salah{border-color:var(--red)}#v-soal .fb{margin-top:8px;font-size:.92rem}#v-soal .benar .fb{color:#0b7a5f}#v-soal .salah .fb{color:var(--red)}#v-soal .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}#v-soal .btn{border:0;background:var(--pink);color:#fff;padding:12px 26px;border-radius:30px;font-size:1rem;font-weight:700;cursor:pointer}#v-soal .btn.alt{background:var(--mint)}#v-soal .btn:hover{filter:brightness(1.1)}#v-soal .hasil{margin-top:20px;text-align:center;background:#ffffff14;border-radius:14px;padding:18px;font-size:1.2rem}#v-soal .hasil b{font-size:2.2rem;color:var(--yel)}#v-soal button:focus-visible,#v-soal input:focus-visible{outline:3px solid var(--yel)}body{background:#0b0e17}.top{background:#080b13;border-bottom:1px solid #232a45}.top a:hover{background:#ffffff18}.top a.on:hover{background:#ffd166}
+#v-beranda{--ink:#e8eaf6;--paper:#0b0e17;--line:#2a3050;--teal:#3dd6c0;background:#0b0e17;color:#e8eaf6}
+#v-beranda .hero{background:linear-gradient(135deg,#121a33,#0b0e17 70%)}
+#v-beranda .c{mix-blend-mode:screen;color:#fff}#v-beranda .a{background:#1f9e8c}#v-beranda .b{background:#b8861a}
+#v-beranda h1{color:#fff}#v-beranda .tag{color:#3dd6c0}
+#v-beranda .btn{color:#0b0e17}#v-beranda .btn:hover{background:#7cebdc}
+#v-beranda .toc li{background:#141a30;border-color:#2a3050;border-left-color:#3dd6c0}
+#v-beranda .toc a{color:#e8eaf6}#v-beranda .toc li::before{color:#3dd6c0}
+#v-beranda .cta{background:#141a30;border:1px solid #2a3050;color:#e8eaf6}
+#v-beranda footer{color:#8a93b8}
+#v-materi{--bg:#0e1018;--ink:#e6e2d9;--rust:#ff9f6b;--card:#171a26;--line:#2b2f43;background:#0e1018;color:#e6e2d9}
+#v-materi .side a.on{background:#2a1f1a}#v-materi .side a{color:#c9c5bb}
+#v-materi .ex{background:#171a26;border-left-color:#ff9f6b}
+#v-materi .f{background:#07080d;color:#ffd9b8;border:1px solid #2b2f43}
+#v-materi th{background:#222638}#v-materi .next{color:#0e1018;background:#ff9f6b}
+#v-materi .figs svg{border-color:#2b2f43}
+#v-soal{background:#0a0b17;--ink:#e8eaf6}
+#v-soal .q{background:#151933;color:#e8eaf6}#v-soal .q .tipe{background:#ffd166;color:#0a0b17}
+#v-soal .opt{border-color:#343a63}#v-soal .opt:hover{border-color:#ff5d8f}
+#v-soal .q input[type=text]{background:#0d1022;color:#fff;border-color:#343a63}
+#v-soal .q.benar{border-color:#2ec4a0}#v-soal .q.salah{border-color:#e5484d}
+#v-soal .benar .fb{color:#4ee0b5}#v-soal .salah .fb{color:#ff7b80}
+#v-soal .hasil{background:#151933}
+</style></head><body>
+<nav class="top"><b>Himpunan</b><div><a href="#beranda">Beranda</a><a href="#materi">Materi</a><a href="#soal">Contoh Soal</a></div></nav>
+<div class="view" id="v-beranda">
+
+<header class="hero">
+  <div class="venn" aria-hidden="true"><span class="c a">A</span><span class="c b">B</span></div>
+  <div class="hero-text">
+    <p class="tag">Matematika Diskret</p>
+    <h1>Himpunan</h1>
+    <p class="lead">Belajar himpunan dari pengertian sampai operasi, lalu uji pemahamanmu dengan soal yang selalu baru.</p>
+    <p class="by">Disusun oleh <strong>Kelompok 2 Matematika Diskret</strong></p>
+    <a class="btn" href="#materi">Mulai belajar</a>
+  </div>
+</header>
+<main class="wrap">
+  <h2>Daftar materi</h2>
+  <ol class="toc" id="toc"></ol>
+  <section class="cta"><h2>Sudah paham?</h2><p>Kerjakan 10 soal pilihan ganda dan isian. Setiap selesai, soal baru yang berbeda akan dibuat.</p><a class="btn alt" href="#soal">Kerjakan soal</a></section>
+</main>
+<footer>Kelompok 2 &middot; Matematika Diskret</footer>
+</div>
+<div class="view" id="v-materi">
+
+<div class="layout">
+<aside class="side"><h3>Daftar isi</h3><ul id="menu"></ul></aside>
+<article class="doc">
+<h1>Materi Himpunan</h1>
+
+<section id="pengertian"><h2>Pengertian</h2>
+<p>Himpunan adalah kumpulan objek-objek yang berbeda, digunakan untuk mengelompokkan sejumlah objek. Objek dalam himpunan disebut <b>elemen</b>, <b>unsur</b>, atau <b>anggota</b>.</p>
+<p class="ex">Contoh: A = {1,2,3,4} menggambarkan himpunan A dengan 4 anggota, yaitu 1, 2, 3, dan 4.</p>
+<p>Jika himpunan berukuran besar atau tak terbatas, himpunan dapat digambarkan dengan mendaftar sifat yang diperlukan untuk menjadi anggota.</p>
+<p class="ex">Contoh: B = { x | x bilangan bulat genap positif }</p></section>
+
+<section id="karakteristik"><h2>Karakteristik Himpunan</h2>
+<p>Himpunan harus <b>well-defined</b>: secara definitif dapat dinyatakan apakah suatu objek merupakan elemen atau bukan elemen himpunan tersebut.</p>
+<p class="ex">S = {beberapa bilangan asli} bukan himpunan well-defined, sebab tidak dapat dinyatakan apakah 5 ∈ S atau 5 ∉ S.<br>S = {empat bilangan asli pertama} well-defined, sebab elemennya dapat disebutkan secara definitif, yaitu 1, 2, 3, dan 4.</p></section>
+
+<section id="ekspresi"><h2>Ekspresi Himpunan</h2>
+<p>Himpunan dapat dinyatakan dengan menyebutkan sifat-sifatnya atau mendaftar elemen-elemennya. Misalnya himpunan bilangan prima yang kurang dari atau sama dengan 5 dapat ditulis {2,3,5} atau {x | x bilangan prima ≤ 5}.</p>
+<p>Jika a adalah salah satu elemen himpunan S, dinotasikan <b>a ∈ S</b>. Ada tepat satu himpunan yang tidak memiliki elemen, yaitu <b>himpunan kosong</b>, dinotasikan Ø.</p></section>
+
+<section id="penyajian"><h2>Cara Penyajian Himpunan</h2>
+<h3>1. Enumerasi elemen</h3>
+<p>Menuliskan semua elemen himpunan di antara dua tanda kurung kurawal. Himpunan biasanya diberi nama dengan huruf kapital atau simbol lain.</p>
+<p class="ex">A = {1,2,3,4} adalah himpunan 4 bilangan asli pertama.</p>
+<h3>2. Simbol-simbol baku</h3>
+<table><tr><td>P</td><td>Himpunan bilangan bulat positif = {1, 2, 3, ...}</td></tr>
+<tr><td>N</td><td>Himpunan bilangan alami (natural) = {1, 2, ...}</td></tr>
+<tr><td>Z</td><td>Himpunan bilangan bulat = {..., -2, -1, 0, 1, 2, ...}</td></tr>
+<tr><td>Q</td><td>Himpunan bilangan rasional</td></tr>
+<tr><td>R</td><td>Himpunan bilangan riil</td></tr>
+<tr><td>C</td><td>Himpunan bilangan kompleks</td></tr>
+<tr><td>U</td><td>Himpunan semesta (universal)</td></tr></table>
+<p class="ex">Misalkan U = {1,2,3,4,5} dan A himpunan bagian dari U dengan A = {1,3,5}.</p>
+<h3>3. Notasi pembentuk himpunan</h3>
+<p>Notasi: <b>{ x | syarat yang harus dipenuhi x }</b></p>
+<ul><li>Bagian kiri tanda "|" melambangkan elemen himpunan.</li><li>Tanda "|" dibaca "di mana" atau "sedemikian sehingga".</li><li>Bagian kanan tanda "|" menunjukkan syarat keanggotaan.</li><li>Setiap tanda "," di dalam syarat keanggotaan dibaca "dan".</li></ul>
+<p class="ex">A = himpunan bilangan bulat positif yang lebih kecil dari 5:<br>A = {x | x bilangan bulat positif kurang dari 5} = {x | x ∈ P, x &lt; 5} = {1,2,3,4}</p>
+<p class="ex">B = himpunan bilangan genap positif yang kurang dari atau sama dengan 8:<br>B = {x | x/2 ∈ P, 2 ≤ x ≤ 8} = {2,4,6,8}</p>
+<h3>4. Diagram Venn</h3>
+<p>Menyajikan himpunan secara grafis. Himpunan semesta (U) digambarkan sebagai persegi panjang, sedangkan himpunan lainnya sebagai lingkaran di dalamnya.</p>
+<p class="ex">Misal U = {1,2,...,7,8}, A = {1,2,3,5}, B = {2,5,6,8}.</p>
+<div class="figs" data-v="contoh"></div></section>
+
+<section id="relasi"><h2>Relasi Himpunan</h2>
+<h3>Himpunan bagian</h3>
+<p>Himpunan B adalah himpunan bagian (subset) dari A, dinotasikan B ⊆ A atau A ⊇ B, jika setiap elemen B merupakan elemen A.</p>
+<h3>Sejati dan tak sejati</h3>
+<p>Untuk setiap himpunan A, himpunan A dan Ø keduanya merupakan himpunan bagian dari A. A disebut himpunan bagian tak sejati (improper subset), sedangkan himpunan bagian lainnya disebut himpunan bagian sejati (proper subset).</p>
+<p class="ex">S = {a,b,c} memiliki 8 himpunan bagian: Ø, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}.</p>
+<h3>Himpunan sama</h3>
+<p>A dan B sama (A = B) jika dan hanya jika A ⊆ B dan B ⊆ A.</p>
+<p class="ex">A = {1,2,3,4} dan B = {3,2,4,1} adalah himpunan yang sama.</p></section>
+
+<section id="kardinalitas"><h2>Kardinalitas</h2>
+<p>Jika A memiliki elemen yang berhingga banyaknya, jumlah elemen A disebut kardinal himpunan A. Notasi: n(A) atau |A|.</p>
+<p class="ex">B = {x | x bilangan prima kurang dari 20} = {2,3,5,7,11,13,17,19}, maka n(B) = 8.</p></section>
+
+<section id="kosong"><h2>Himpunan Kosong</h2>
+<p>Himpunan yang tidak memiliki satu pun elemen, atau kardinalnya 0. Notasi: Ø atau { }.</p>
+<p class="ex">E = {x | x &lt; x}, maka n(E) = 0.<br>P = {orang Indonesia yang pernah ke bulan}, maka n(P) = 0.</p></section>
+
+<section id="ekuivalen"><h2>Himpunan yang Ekuivalen</h2>
+<p>Himpunan A ekuivalen dengan himpunan B jika dan hanya jika kardinal kedua himpunan sama. Notasi: A ~ B ↔ |A| = |B|.</p>
+<p class="ex">A = {1,3,5,7} dan B = {a,b,c,d}, maka A ~ B.</p></section>
+
+<section id="lepas"><h2>Himpunan Saling Lepas</h2>
+<p>Dua himpunan A dan B saling lepas (disjoint) jika keduanya tidak memiliki elemen yang sama. Notasi: A // B.</p>
+<p class="ex">A = {x | x ∈ P, x &lt; 8} dan B = {20,30,...}, maka A // B.</p></section>
+
+<section id="kuasa"><h2>Himpunan Kuasa</h2>
+<p>Himpunan kuasa (powerset) dari A adalah himpunan yang elemennya semua himpunan bagian dari A, termasuk himpunan kosong dan A sendiri. Notasi: P(A) atau 2<sup>A</sup>.</p>
+<p class="ex">A = {1,2}, maka P(A) = { { }, {1}, {2}, {1,2} } dan n(P(A)) = 4.</p></section>
+
+<section id="operasi"><h2>Operasi terhadap Himpunan</h2>
+<div class="op"><h3>Irisan (intersection)</h3><p>Himpunan yang setiap elemennya merupakan elemen A dan elemen B.</p><p class="f">A ∩ B = { x | x ∈ A dan x ∈ B }</p><div class="figs" data-v="inter"></div></div>
+<div class="op"><h3>Gabungan (union)</h3><p>Himpunan yang setiap anggotanya merupakan anggota A atau B.</p><p class="f">A ∪ B = { x | x ∈ A atau x ∈ B }</p><div class="figs" data-v="union"></div></div>
+<div class="op"><h3>Komplemen</h3><p>Himpunan yang elemennya merupakan elemen U yang bukan elemen A dan bukan elemen B.</p><p class="f">Ā = { x | x ∈ U dan x ∉ A }</p><div class="figs" data-v="komp"></div></div>
+<div class="op"><h3>Selisih (A − C)</h3><p>Himpunan yang elemennya merupakan elemen A dan bukan elemen C.</p><p class="f">A − C = { x | x ∈ A dan x ∉ C } = A ∩ C̄</p><div class="figs" data-v="diff"></div></div>
+<div class="op"><h3>Beda setangkup (symmetric difference)</h3><p>Himpunan yang elemennya ada pada A atau B tetapi tidak pada keduanya.</p><p class="f">A ⊕ B = (A ∪ B) − (A ∩ B) = (A − B) ∪ (B − A)</p><div class="figs" data-v="sym"></div></div>
+<div class="op"><h3>Perkalian kartesian</h3><p>Himpunan yang elemennya semua pasangan berurutan (ordered pairs) dengan komponen pertama dari A dan komponen kedua dari B.</p><p class="f">A × B = { (a, b) | a ∈ A dan b ∈ B }</p><p class="ex">C = {1,2,3} dan D = {a,b}, maka C × D = {(1,a),(1,b),(2,a),(2,b),(3,a),(3,b)}</p></div></section>
+
+<section id="sifat"><h2>Sifat-sifat Operasi Himpunan</h2>
+<table class="law"><tr><th>Hukum</th><th>Rumus</th></tr>
+<tr><td>Identitas</td><td>A ∪ Ø = A; &nbsp; A ∩ U = A</td></tr>
+<tr><td>Komplemen</td><td>A ∪ Ā = U; &nbsp; A ∩ Ā = Ø</td></tr>
+<tr><td>Involusi</td><td>(Ā)‾ = A</td></tr>
+<tr><td>Null</td><td>A ∩ Ø = Ø; &nbsp; A ∪ U = U</td></tr>
+<tr><td>Idempoten</td><td>A ∪ A = A; &nbsp; A ∩ A = A</td></tr>
+<tr><td>Penyerapan</td><td>A ∪ (A ∩ B) = A; &nbsp; A ∩ (A ∪ B) = A</td></tr>
+<tr><td>De Morgan</td><td>(A ∪ C)‾ = Ā ∩ C̄</td></tr></table></section>
+
+<a class="next" href="#soal">Lanjut ke contoh soal</a>
+</article></div>
+</div>
+<div class="view" id="v-soal">
+
+<main class="stage">
+  <div class="head"><h1>Contoh Soal Himpunan</h1>
+  <p>Set <b id="setNo">1</b> &middot; 5 pilihan ganda + 5 isian. Untuk isian, tulis himpunan seperti <code>{1,2,3}</code>, himpunan kosong seperti <code>{}</code>, atau angka untuk jumlah.</p>
+  <div class="bar"><div id="fill"></div></div><small id="prog">Terjawab 0 dari 10</small></div>
+  <form id="quiz"></form>
+  <div class="actions"><button id="cek" class="btn">Periksa jawaban</button><button id="baru" class="btn alt" hidden>Buat 10 soal baru</button></div>
+  <div id="hasil" class="hasil" hidden></div>
+</main>
+</div>
+<script>(()=>{const topik = [
+ ["Pengertian himpunan","pengertian"],["Karakteristik himpunan","karakteristik"],["Ekspresi himpunan","ekspresi"],
+ ["Cara penyajian himpunan","penyajian"],["Relasi himpunan","relasi"],["Kardinalitas","kardinalitas"],
+ ["Himpunan kosong","kosong"],["Himpunan ekuivalen","ekuivalen"],["Himpunan saling lepas","lepas"],
+ ["Himpunan kuasa","kuasa"],["Operasi terhadap himpunan","operasi"],["Sifat-sifat operasi himpunan","sifat"]
+];
+document.getElementById("toc").innerHTML = topik.map(t => `<li><a href="#materi" data-sec="${t[1]}">${t[0]}</a></li>`).join("");
+})();
+(()=>{// Daftar isi samping + penanda bagian aktif
+const secs = [...document.querySelectorAll("section")];
+const menu = document.getElementById("menu");
+menu.innerHTML = secs.map(s => `<li><a href="#${s.id}">${s.querySelector("h2").textContent}</a></li>`).join("");
+const links = [...menu.querySelectorAll("a")];
+secs.forEach(s => new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) links.forEach(l => l.classList.toggle("on", l.hash === "#" + s.id));
+}), {rootMargin: "-20% 0px -70% 0px"}).observe(s));
+
+// Diagram Venn (SVG)
+let k = 0;
+function venn(type) {
+  const id = "c" + k++, A = `<circle cx="95" cy="75" r="55"`, B = `<circle cx="165" cy="75" r="55"`, S = "#7fc8b8";
+  let f = "";
+  if (type === "union") f = `${A} fill="${S}"/>${B} fill="${S}"/>`;
+  if (type === "inter") f = `<clipPath id="${id}">${A}/></clipPath>${B} fill="${S}" clip-path="url(#${id})"/>`;
+  if (type === "diff") f = `${A} fill="${S}"/>${B} fill="#fff"/>`;
+  if (type === "sym") f = `<clipPath id="${id}">${A}/></clipPath>${A} fill="${S}"/>${B} fill="${S}"/>${B} fill="#fff" clip-path="url(#${id})"/>`;
+  if (type === "komp") f = `<rect width="260" height="150" fill="${S}"/>${A} fill="#fff"/>${B} fill="#fff"/>`;
+  return `<svg viewBox="0 0 260 150" width="260">${f}${A} fill="none" stroke="#333"/>${B} fill="none" stroke="#333"/>
+  <text x="60" y="45" font-size="14">A</text><text x="195" y="45" font-size="14">B</text><rect width="260" height="150" fill="none" stroke="#333"/></svg>`;
+}
+document.querySelectorAll(".figs").forEach(d => {
+  if (d.dataset.v === "contoh") {
+    d.innerHTML = `<svg viewBox="0 0 320 170" width="320"><rect x="2" y="2" width="316" height="166" fill="none" stroke="#333"/>
+    <ellipse cx="105" cy="90" rx="70" ry="55" fill="none" stroke="#333"/><ellipse cx="190" cy="90" rx="70" ry="55" fill="none" stroke="#333"/>
+    <text x="10" y="18" font-size="13">U</text><text x="85" y="55" font-size="13">A</text><text x="200" y="55" font-size="13">B</text>
+    <text x="70" y="85" font-size="13">1</text><text x="70" y="115" font-size="13">3</text><text x="140" y="85" font-size="13">2</text><text x="140" y="115" font-size="13">5</text>
+    <text x="205" y="85" font-size="13">6</text><text x="205" y="115" font-size="13">8</text><text x="285" y="60" font-size="13">7</text><text x="285" y="120" font-size="13">4</text></svg>`;
+  } else d.innerHTML = venn(d.dataset.v);
+});
+})();
+(()=>{// ===== Pembuat soal acak: setiap set berisi soal baru yang berbeda =====
+const rnd = n => Math.floor(Math.random() * n);
+const pick = (n, max = 9) => { const s = new Set(); while (s.size < n) s.add(1 + rnd(max)); return [...s].sort((a, b) => a - b); };
+const fmt = a => "{" + a.join(",") + "}";
+const U = [1,2,3,4,5,6,7,8,9];
+const un = (a, b) => [...new Set([...a, ...b])].sort((x, y) => x - y);
+const it = (a, b) => a.filter(x => b.includes(x));
+const df = (a, b) => a.filter(x => !b.includes(x));
+const sd = (a, b) => un(df(a, b), df(b, a));
+const sz = () => 3 + rnd(3);
+
+// tiap generator mengembalikan {q, ans} ; ans berupa array (himpunan) atau angka
+const gens = [
+  () => { const A = pick(sz()), B = pick(sz()); return {q: `Jika A = ${fmt(A)} dan B = ${fmt(B)}, tentukan A ∪ B`, ans: un(A, B)}; },
+  () => { const A = pick(sz()), B = pick(sz()); return {q: `Jika A = ${fmt(A)} dan B = ${fmt(B)}, tentukan A ∩ B`, ans: it(A, B)}; },
+  () => { const A = pick(sz()), B = pick(sz()); return {q: `Jika A = ${fmt(A)} dan B = ${fmt(B)}, tentukan A − B`, ans: df(A, B)}; },
+  () => { const A = pick(sz()), B = pick(sz()); return {q: `Jika A = ${fmt(A)} dan B = ${fmt(B)}, tentukan B − A`, ans: df(B, A)}; },
+  () => { const A = pick(sz()), B = pick(sz()); return {q: `Jika A = ${fmt(A)} dan B = ${fmt(B)}, tentukan A ⊕ B (beda setangkup)`, ans: sd(A, B)}; },
+  () => { const A = pick(sz()); return {q: `Jika U = {1,2,3,4,5,6,7,8,9} dan A = ${fmt(A)}, tentukan komplemen A`, ans: df(U, A)}; },
+  () => { const A = pick(sz()), B = pick(sz()), C = pick(sz()); return {q: `Jika A = ${fmt(A)}, B = ${fmt(B)}, C = ${fmt(C)}, tentukan A ∩ (B ∪ C)`, ans: it(A, un(B, C))}; },
+  () => { const A = pick(sz()), B = pick(sz()), C = pick(sz()); return {q: `Jika A = ${fmt(A)}, B = ${fmt(B)}, C = ${fmt(C)}, tentukan (A ∪ B) − C`, ans: df(un(A, B), C)}; },
+  () => { const n = 2 + rnd(5); return {q: `Jika himpunan A memiliki ${n} elemen, berapa banyak elemen himpunan kuasa P(A)?`, ans: 2 ** n}; },
+  () => { const x = 2 + rnd(4), y = 2 + rnd(4); return {q: `Jika |X| = ${x} dan |Y| = ${y}, berapa |X × Y| (jumlah pasangan berurutan)?`, ans: x * y}; },
+  () => { const A = pick(sz()), B = pick(sz()); return {q: `Jika A = ${fmt(A)} dan B = ${fmt(B)}, berapa n(A ∪ B)?`, ans: un(A, B).length}; },
+  () => { const A = pick(sz()), B = pick(sz()); return {q: `Jika A = ${fmt(A)} dan B = ${fmt(B)}, berapa n(A ∩ B)?`, ans: it(A, B).length}; },
+  () => { const n = 2 + rnd(4); return {q: `Berapa banyak himpunan bagian dari himpunan yang memiliki ${n} elemen?`, ans: 2 ** n}; }
+];
+const show = a => Array.isArray(a) ? fmt(a) : String(a);
+
+function distractors(ans) {
+  const out = new Set([show(ans)]); let t = 0;
+  while (out.size < 4 && t++ < 200) {
+    if (Array.isArray(ans)) {
+      let d = [...ans];
+      const r = rnd(3);
+      if (r === 0 || !d.length) d = un(d, [1 + rnd(9)]);
+      else if (r === 1) d.splice(rnd(d.length), 1);
+      else { d.splice(rnd(d.length), 1); d = un(d, [1 + rnd(9)]); }
+      out.add(fmt(d));
+    } else out.add(String(Math.max(0, ans + [-2, -1, 1, 2, ans][rnd(5)] || ans + 3)));
+  }
+  return [...out].sort(() => Math.random() - .5);
+}
+
+const dipakai = new Set();   // riwayat soal agar tidak ada yang berulang
+let setKe = 0, soal = [], sudahCek = false;
+
+function buat() {
+  setKe++; sudahCek = false; soal = [];
+  const mk = tipe => {
+    for (let t = 0; t < 500; t++) {
+      const s = gens[rnd(gens.length)]();
+      if (!dipakai.has(s.q)) { dipakai.add(s.q); s.tipe = tipe; if (tipe === "pg") s.opsi = distractors(s.ans); return s; }
+    }
+    const s = gens[rnd(gens.length)](); s.tipe = tipe; if (tipe === "pg") s.opsi = distractors(s.ans); return s;
+  };
+  for (let i = 0; i < 5; i++) soal.push(mk("pg"));
+  for (let i = 0; i < 5; i++) soal.push(mk("isi"));
+  render();
+}
+
+function render() {
+  document.getElementById("setNo").textContent = setKe;
+  document.getElementById("quiz").innerHTML = soal.map((s, i) => `
+    <div class="q" id="q${i}"><span class="tipe">${s.tipe === "pg" ? "Pilihan ganda" : "Isian"}</span><p>${i + 1}. ${s.q}</p>
+    ${s.tipe === "pg" ? s.opsi.map((o, j) => `<label class="opt"><input type="radio" name="n${i}" value="${o}">${"ABCD"[j]}. ${o}</label>`).join("")
+    : `<input type="text" name="n${i}" placeholder="Tulis jawabanmu" autocomplete="off">`}
+    <div class="fb"></div></div>`).join("");
+  document.getElementById("cek").hidden = false;
+  document.getElementById("baru").hidden = true;
+  document.getElementById("hasil").hidden = true;
+  progres();
+}
+
+const ambil = i => {
+  const e = document.querySelector(`[name=n${i}]:checked`) || document.querySelector(`input[type=text][name=n${i}]`);
+  return e ? e.value.trim() : "";
+};
+function progres() {
+  const n = soal.filter((_, i) => ambil(i) !== "").length;
+  document.getElementById("fill").style.width = n * 10 + "%";
+  document.getElementById("prog").textContent = `Terjawab ${n} dari 10`;
+}
+document.getElementById("quiz").addEventListener("input", progres);
+
+// normalisasi jawaban isian: ambil angka-angka, urutkan
+function norm(str, ans) {
+  const s = str.toLowerCase().replace(/\s/g, "");
+  if (!Array.isArray(ans)) return s.replace(/[^0-9]/g, "");
+  if (s === "" ) return null;
+  if (/^(\{\}|ø|∅|kosong|himpunankosong)$/.test(s)) return "";
+  const m = s.match(/\d+/g);
+  return m ? [...new Set(m.map(Number))].sort((a, b) => a - b).join(",") : null;
+}
+
+document.getElementById("cek").onclick = () => {
+  if (sudahCek) return;
+  sudahCek = true; let skor = 0;
+  soal.forEach((s, i) => {
+    const box = document.getElementById("q" + i), j = ambil(i);
+    const bener = s.tipe === "pg" ? j === show(s.ans) : norm(j, s.ans) === (Array.isArray(s.ans) ? s.ans.join(",") : String(s.ans));
+    if (bener) skor++;
+    box.classList.add(bener ? "benar" : "salah");
+    box.querySelector(".fb").textContent = bener ? "Benar!" : `Belum tepat. Jawaban yang benar: ${show(s.ans)}`;
+    box.querySelectorAll("input").forEach(x => x.disabled = true);
+  });
+  const h = document.getElementById("hasil");
+  h.hidden = false;
+  h.innerHTML = `Skor kamu <b>${skor * 10}</b> / 100 (${skor} dari 10 benar)`;
+  document.getElementById("cek").hidden = true;
+  document.getElementById("baru").hidden = false;
+  h.scrollIntoView({behavior: "smooth"});
+};
+document.getElementById("baru").onclick = () => { buat(); scrollTo({top: 0, behavior: "smooth"}); };
+buat();
+})();
+
+const names=["beranda","materi","soal"];
+function go(){let h=location.hash.slice(1);
+ if(!names.includes(h)){const el=h&&document.getElementById(h);if(el&&el.closest("#v-materi"))h="materi";else if(!h)h="beranda";else return;}
+ names.forEach(n=>{document.getElementById("v-"+n).classList.toggle("show",n===h);document.querySelector('.top [href="#'+n+'"]').classList.toggle("on",n===h)});}
+addEventListener("hashchange",go);go();
+document.addEventListener("click",e=>{const a=e.target.closest("a[data-sec]");if(!a)return;e.preventDefault();
+ location.hash="materi";go();setTimeout(()=>document.getElementById(a.dataset.sec).scrollIntoView(),50);});
+</script></body></html>

@@ -1,0 +1,38 @@
+:root{--ink:#10304a;--teal:#0a7a6f;--sun:#f2b134;--paper:#f6fbf9;--line:#cfe3dd}
+*{box-sizing:border-box;margin:0}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:var(--ink);flex-wrap:wrap;gap:8px}
+.nav a{color:#fff;text-decoration:none;margin-left:20px;font-family:system-ui,sans-serif}
+.nav .brand{font-weight:700;font-size:1.2rem;margin:0;color:var(--sun)}
+.nav a:hover{text-decoration:underline}
+.hero{display:flex;align-items:center;justify-content:center;gap:6vw;padding:8vh 6vw;flex-wrap:wrap;background:linear-gradient(135deg,#e3f4ef,#fff)}
+.venn{position:relative;width:300px;height:200px}
+.c{position:absolute;top:0;width:190px;height:190px;border-radius:50%;display:flex;align-items:center;font:700 2rem system-ui;color:var(--ink);mix-blend-mode:multiply}
+.a{left:0;background:#7fd3c4;padding-left:35px}.b{right:0;background:#f7d27a;justify-content:flex-end;padding-right:35px}
+.hero-text{max-width:460px}
+.tag{font-family:system-ui;color:var(--teal);font-weight:600}
+h1{font-size:clamp(3rem,9vw,5.5rem);line-height:1}
+.lead{margin:14px 0;font-size:1.15rem}.by{margin-bottom:22px}
+.btn{display:inline-block;background:var(--teal);color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-family:system-ui;font-weight:600}
+.btn:hover{background:var(--ink)}.btn.alt{background:var(--sun);color:var(--ink)}
+.wrap{max-width:900px;margin:auto;padding:40px 6vw}
+h2{margin-bottom:16px}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;padding-left:0;list-style:none;counter-reset:n}
+.toc li{counter-increment:n;background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);padding:10px 14px}
+.toc li::before{content:counter(n)". ";font-weight:700;color:var(--teal)}
+.toc a{color:var(--ink);text-decoration:none}.toc a:hover{text-decoration:underline}
+.cta{margin-top:40px;background:var(--ink);color:#fff;padding:28px;border-radius:14px}.cta p{margin-bottom:16px}
+footer{text-align:center;padding:24px;font-family:system-ui;font-size:.9rem;color:#567}
+@media(prefers-reduced-motion:no-preference){.hero-text{animation:in .8s both}@keyframes in{from{opacity:0;transform:translateY(14px)}}}
+
+/* ===== Tema gelap ===== */
+body{background:#0b0e17}.nav{background:#080b13!important;border-bottom:1px solid #232a45}
+body{--ink:#e8eaf6;--paper:#0b0e17;--line:#2a3050;--teal:#3dd6c0;background:#0b0e17;color:#e8eaf6}
+.hero{background:linear-gradient(135deg,#121a33,#0b0e17 70%)}
+.c{mix-blend-mode:screen;color:#fff}.a{background:#1f9e8c}.b{background:#b8861a}
+h1{color:#fff}.tag{color:#3dd6c0}
+.btn{color:#0b0e17}.btn:hover{background:#7cebdc}
+.toc li{background:#141a30;border-color:#2a3050;border-left-color:#3dd6c0}
+.toc a{color:#e8eaf6}.toc li::before{color:#3dd6c0}
+.cta{background:#141a30;border:1px solid #2a3050;color:#e8eaf6}
+footer{color:#8a93b8}

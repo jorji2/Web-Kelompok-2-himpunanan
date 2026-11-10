@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Materi Himpunan</title><link rel="stylesheet" href="materi.css"></head><body>
+<nav class="nav"><a class="brand" href="index.html">Himpunan</a><div><a href="index.html">Beranda</a><a href="materi.html">Materi</a><a href="soal.html">Contoh Soal</a></div></nav>
+<div class="layout">
+<aside class="side"><h3>Daftar isi</h3><ul id="menu"></ul></aside>
+<article class="doc">
+<h1>Materi Himpunan</h1>
+
+<section id="pengertian"><h2>Pengertian</h2>
+<p>Himpunan adalah kumpulan objek-objek yang berbeda, digunakan untuk mengelompokkan sejumlah objek. Objek dalam himpunan disebut <b>elemen</b>, <b>unsur</b>, atau <b>anggota</b>.</p>
+<p class="ex">Contoh: A = {1,2,3,4} menggambarkan himpunan A dengan 4 anggota, yaitu 1, 2, 3, dan 4.</p>
+<p>Jika himpunan berukuran besar atau tak terbatas, himpunan dapat digambarkan dengan mendaftar sifat yang diperlukan untuk menjadi anggota.</p>
+<p class="ex">Contoh: B = { x | x bilangan bulat genap positif }</p></section>
+
+<section id="karakteristik"><h2>Karakteristik Himpunan</h2>
+<p>Himpunan harus <b>well-defined</b>: secara definitif dapat dinyatakan apakah suatu objek merupakan elemen atau bukan elemen himpunan tersebut.</p>
+<p class="ex">S = {beberapa bilangan asli} bukan himpunan well-defined, sebab tidak dapat dinyatakan apakah 5 ∈ S atau 5 ∉ S.<br>S = {empat bilangan asli pertama} well-defined, sebab elemennya dapat disebutkan secara definitif, yaitu 1, 2, 3, dan 4.</p></section>
+
+<section id="ekspresi"><h2>Ekspresi Himpunan</h2>
+<p>Himpunan dapat dinyatakan dengan menyebutkan sifat-sifatnya atau mendaftar elemen-elemennya. Misalnya himpunan bilangan prima yang kurang dari atau sama dengan 5 dapat ditulis {2,3,5} atau {x | x bilangan prima ≤ 5}.</p>
+<p>Jika a adalah salah satu elemen himpunan S, dinotasikan <b>a ∈ S</b>. Ada tepat satu himpunan yang tidak memiliki elemen, yaitu <b>himpunan kosong</b>, dinotasikan Ø.</p></section>
+
+<section id="penyajian"><h2>Cara Penyajian Himpunan</h2>
+<h3>1. Enumerasi elemen</h3>
+<p>Menuliskan semua elemen himpunan di antara dua tanda kurung kurawal. Himpunan biasanya diberi nama dengan huruf kapital atau simbol lain.</p>
+<p class="ex">A = {1,2,3,4} adalah himpunan 4 bilangan asli pertama.</p>
+<h3>2. Simbol-simbol baku</h3>
+<table><tr><td>P</td><td>Himpunan bilangan bulat positif = {1, 2, 3, ...}</td></tr>
+<tr><td>N</td><td>Himpunan bilangan alami (natural) = {1, 2, ...}</td></tr>
+<tr><td>Z</td><td>Himpunan bilangan bulat = {..., -2, -1, 0, 1, 2, ...}</td></tr>
+<tr><td>Q</td><td>Himpunan bilangan rasional</td></tr>
+<tr><td>R</td><td>Himpunan bilangan riil</td></tr>
+<tr><td>C</td><td>Himpunan bilangan kompleks</td></tr>
+<tr><td>U</td><td>Himpunan semesta (universal)</td></tr></table>
+<p class="ex">Misalkan U = {1,2,3,4,5} dan A himpunan bagian dari U dengan A = {1,3,5}.</p>
+<h3>3. Notasi pembentuk himpunan</h3>
+<p>Notasi: <b>{ x | syarat yang harus dipenuhi x }</b></p>
+<ul><li>Bagian kiri tanda "|" melambangkan elemen himpunan.</li><li>Tanda "|" dibaca "di mana" atau "sedemikian sehingga".</li><li>Bagian kanan tanda "|" menunjukkan syarat keanggotaan.</li><li>Setiap tanda "," di dalam syarat keanggotaan dibaca "dan".</li></ul>
+<p class="ex">A = himpunan bilangan bulat positif yang lebih kecil dari 5:<br>A = {x | x bilangan bulat positif kurang dari 5} = {x | x ∈ P, x &lt; 5} = {1,2,3,4}</p>
+<p class="ex">B = himpunan bilangan genap positif yang kurang dari atau sama dengan 8:<br>B = {x | x/2 ∈ P, 2 ≤ x ≤ 8} = {2,4,6,8}</p>
+<h3>4. Diagram Venn</h3>
+<p>Menyajikan himpunan secara grafis. Himpunan semesta (U) digambarkan sebagai persegi panjang, sedangkan himpunan lainnya sebagai lingkaran di dalamnya.</p>
+<p class="ex">Misal U = {1,2,...,7,8}, A = {1,2,3,5}, B = {2,5,6,8}.</p>
+<div class="figs" data-v="contoh"></div></section>
+
+<section id="relasi"><h2>Relasi Himpunan</h2>
+<h3>Himpunan bagian</h3>
+<p>Himpunan B adalah himpunan bagian (subset) dari A, dinotasikan B ⊆ A atau A ⊇ B, jika setiap elemen B merupakan elemen A.</p>
+<h3>Sejati dan tak sejati</h3>
+<p>Untuk setiap himpunan A, himpunan A dan Ø keduanya merupakan himpunan bagian dari A. A disebut himpunan bagian tak sejati (improper subset), sedangkan himpunan bagian lainnya disebut himpunan bagian sejati (proper subset).</p>
+<p class="ex">S = {a,b,c} memiliki 8 himpunan bagian: Ø, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}.</p>
+<h3>Himpunan sama</h3>
+<p>A dan B sama (A = B) jika dan hanya jika A ⊆ B dan B ⊆ A.</p>
+<p class="ex">A = {1,2,3,4} dan B = {3,2,4,1} adalah himpunan yang sama.</p></section>
+
+<section id="kardinalitas"><h2>Kardinalitas</h2>
+<p>Jika A memiliki elemen yang berhingga banyaknya, jumlah elemen A disebut kardinal himpunan A. Notasi: n(A) atau |A|.</p>
+<p class="ex">B = {x | x bilangan prima kurang dari 20} = {2,3,5,7,11,13,17,19}, maka n(B) = 8.</p></section>
+
+<section id="kosong"><h2>Himpunan Kosong</h2>
+<p>Himpunan yang tidak memiliki satu pun elemen, atau kardinalnya 0. Notasi: Ø atau { }.</p>
+<p class="ex">E = {x | x &lt; x}, maka n(E) = 0.<br>P = {orang Indonesia yang pernah ke bulan}, maka n(P) = 0.</p></section>
+
+<section id="ekuivalen"><h2>Himpunan yang Ekuivalen</h2>
+<p>Himpunan A ekuivalen dengan himpunan B jika dan hanya jika kardinal kedua himpunan sama. Notasi: A ~ B ↔ |A| = |B|.</p>
+<p class="ex">A = {1,3,5,7} dan B = {a,b,c,d}, maka A ~ B.</p></section>
+
+<section id="lepas"><h2>Himpunan Saling Lepas</h2>
+<p>Dua himpunan A dan B saling lepas (disjoint) jika keduanya tidak memiliki elemen yang sama. Notasi: A // B.</p>
+<p class="ex">A = {x | x ∈ P, x &lt; 8} dan B = {20,30,...}, maka A // B.</p></section>
+
+<section id="kuasa"><h2>Himpunan Kuasa</h2>
+<p>Himpunan kuasa (powerset) dari A adalah himpunan yang elemennya semua himpunan bagian dari A, termasuk himpunan kosong dan A sendiri. Notasi: P(A) atau 2<sup>A</sup>.</p>
+<p class="ex">A = {1,2}, maka P(A) = { { }, {1}, {2}, {1,2} } dan n(P(A)) = 4.</p></section>
+
+<section id="operasi"><h2>Operasi terhadap Himpunan</h2>
+<div class="op"><h3>Irisan (intersection)</h3><p>Himpunan yang setiap elemennya merupakan elemen A dan elemen B.</p><p class="f">A ∩ B = { x | x ∈ A dan x ∈ B }</p><div class="figs" data-v="inter"></div></div>
+<div class="op"><h3>Gabungan (union)</h3><p>Himpunan yang setiap anggotanya merupakan anggota A atau B.</p><p class="f">A ∪ B = { x | x ∈ A atau x ∈ B }</p><div class="figs" data-v="union"></div></div>
+<div class="op"><h3>Komplemen</h3><p>Himpunan yang elemennya merupakan elemen U yang bukan elemen A dan bukan elemen B.</p><p class="f">Ā = { x | x ∈ U dan x ∉ A }</p><div class="figs" data-v="komp"></div></div>
+<div class="op"><h3>Selisih (A − C)</h3><p>Himpunan yang elemennya merupakan elemen A dan bukan elemen C.</p><p class="f">A − C = { x | x ∈ A dan x ∉ C } = A ∩ C̄</p><div class="figs" data-v="diff"></div></div>
+<div class="op"><h3>Beda setangkup (symmetric difference)</h3><p>Himpunan yang elemennya ada pada A atau B tetapi tidak pada keduanya.</p><p class="f">A ⊕ B = (A ∪ B) − (A ∩ B) = (A − B) ∪ (B − A)</p><div class="figs" data-v="sym"></div></div>
+<div class="op"><h3>Perkalian kartesian</h3><p>Himpunan yang elemennya semua pasangan berurutan (ordered pairs) dengan komponen pertama dari A dan komponen kedua dari B.</p><p class="f">A × B = { (a, b) | a ∈ A dan b ∈ B }</p><p class="ex">C = {1,2,3} dan D = {a,b}, maka C × D = {(1,a),(1,b),(2,a),(2,b),(3,a),(3,b)}</p></div></section>
+
+<section id="sifat"><h2>Sifat-sifat Operasi Himpunan</h2>
+<table class="law"><tr><th>Hukum</th><th>Rumus</th></tr>
+<tr><td>Identitas</td><td>A ∪ Ø = A; &nbsp; A ∩ U = A</td></tr>
+<tr><td>Komplemen</td><td>A ∪ Ā = U; &nbsp; A ∩ Ā = Ø</td></tr>
+<tr><td>Involusi</td><td>(Ā)‾ = A</td></tr>
+<tr><td>Null</td><td>A ∩ Ø = Ø; &nbsp; A ∪ U = U</td></tr>
+<tr><td>Idempoten</td><td>A ∪ A = A; &nbsp; A ∩ A = A</td></tr>
+<tr><td>Penyerapan</td><td>A ∪ (A ∩ B) = A; &nbsp; A ∩ (A ∪ B) = A</td></tr>
+<tr><td>De Morgan</td><td>(A ∪ C)‾ = Ā ∩ C̄</td></tr></table></section>
+
+<a class="next" href="soal.html">Lanjut ke contoh soal</a>
+</article></div>
+<script src="materi.js"></script></body></html>
