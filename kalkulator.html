@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator Himpunan | Kelompok 2 Matematika Diskret</title>
+  <link rel="stylesheet" href="kalkulator.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html">Himpunan</a>
+    <div>
+      <a href="index.html">Beranda</a>
+      <a href="materi.html">Materi</a>
+      <a href="soal.html">Contoh Soal</a>
+      <a href="kalkulator.html" aria-current="page">Kalkulator</a>
+    </div>
+  </nav>
+
+  <main class="stage">
+    <header class="head">
+      <p class="tag">Matematika Diskret</p>
+      <h1>Kalkulator Himpunan</h1>
+      <p>Masukkan anggota himpunan, pilih operasi, lalu hitung hasilnya.</p>
+    </header>
+
+    <section class="panel">
+      <div class="fields">
+        <label>Himpunan A
+          <input id="setA" type="text" value="1, 2, 3, 4" placeholder="Contoh: 1, 2, 3">
+          <small>Pisahkan setiap anggota dengan koma.</small>
+        </label>
+        <label>Himpunan B
+          <input id="setB" type="text" value="3, 4, 5, 6" placeholder="Contoh: 3, 4, 5">
+          <small>Digunakan untuk operasi yang melibatkan A dan B.</small>
+        </label>
+      </div>
+
+      <label class="operation-label" for="operation">Pilih operasi</label>
+      <select id="operation">
+        <option value="union">Gabungan (A ∪ B)</option>
+        <option value="intersection">Irisan (A ∩ B)</option>
+        <option value="differenceAB">Selisih (A − B)</option>
+        <option value="differenceBA">Selisih (B − A)</option>
+        <option value="symmetric">Beda setangkup (A ⊕ B)</option>
+        <option value="cartesian">Perkalian kartesian (A × B)</option>
+        <option value="cardinalityA">Kardinalitas A (n(A))</option>
+        <option value="cardinalityB">Kardinalitas B (n(B))</option>
+      </select>
+
+      <button id="calculate" class="btn" type="button">Hitung</button>
+      <p id="error" class="error" role="alert" hidden></p>
+
+      <div id="result" class="result" aria-live="polite" hidden>
+        <p class="result-title">Hasil perhitungan</p>
+        <h2 id="resultName"></h2>
+        <div id="resultValue" class="result-value"></div>
+        <p id="resultInfo" class="result-info"></p>
+      </div>
+    </section>
+
+    <p class="note">Catatan: Anggota yang sama akan dihitung satu kali. Masukan dapat berupa angka atau teks.</p>
+    <a class="back" href="materi.html#operasi">Pelajari kembali materi operasi himpunan</a>
+  </main>
+  <script src="kalkulator.js"></script>
+</body>
+</html>

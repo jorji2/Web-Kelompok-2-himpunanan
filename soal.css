@@ -1,0 +1,34 @@
+:root{--bg:#1c1b3a;--card:#fff;--ink:#1c1b3a;--pink:#ff5d8f;--mint:#2ec4a0;--red:#e5484d;--yel:#ffd166}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:#fff;min-height:100vh}
+.nav{display:flex;justify-content:space-between;padding:14px 5vw;flex-wrap:wrap;gap:8px;border-bottom:1px solid #ffffff22}
+.nav a{color:#fff;text-decoration:none;margin-left:18px}.nav .brand{margin:0;font-weight:800;color:var(--yel)}
+.stage{max-width:760px;margin:auto;padding:30px 5vw 60px}
+.head{text-align:center;margin-bottom:22px}.head h1{font-size:2rem;margin-bottom:8px}
+.head p{opacity:.85;font-size:.95rem}code{background:#ffffff22;padding:1px 6px;border-radius:4px}
+.bar{height:8px;background:#ffffff22;border-radius:8px;margin:14px 0 4px;overflow:hidden}
+#fill{height:100%;width:0;background:var(--mint);transition:width .3s}
+.q{background:var(--card);color:var(--ink);border-radius:16px;padding:18px 20px;margin-bottom:16px;border:3px solid transparent}
+.q .tipe{display:inline-block;font-size:.78rem;background:var(--ink);color:#fff;padding:2px 10px;border-radius:20px;margin-bottom:8px}
+.q p{font-size:1.05rem;margin-bottom:10px;font-weight:600}
+.opt{display:block;padding:9px 12px;border:2px solid #d9d9ee;border-radius:10px;margin-bottom:7px;cursor:pointer}
+.opt:hover{border-color:var(--pink)}.opt input{margin-right:8px}
+.q input[type=text]{width:100%;padding:10px;font-size:1rem;border:2px solid #d9d9ee;border-radius:10px}
+.q.benar{border-color:var(--mint)}.q.salah{border-color:var(--red)}
+.fb{margin-top:8px;font-size:.92rem}.benar .fb{color:#0b7a5f}.salah .fb{color:var(--red)}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{border:0;background:var(--pink);color:#fff;padding:12px 26px;border-radius:30px;font-size:1rem;font-weight:700;cursor:pointer}
+.btn.alt{background:var(--mint)}.btn:hover{filter:brightness(1.1)}
+.hasil{margin-top:20px;text-align:center;background:#ffffff14;border-radius:14px;padding:18px;font-size:1.2rem}
+.hasil b{font-size:2.2rem;color:var(--yel)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--yel)}
+
+/* ===== Tema gelap ===== */
+body{background:#0b0e17}.nav{background:#080b13!important;border-bottom:1px solid #232a45}
+body{background:#0a0b17;--ink:#e8eaf6}
+.q{background:#151933;color:#e8eaf6}.q .tipe{background:#ffd166;color:#0a0b17}
+.opt{border-color:#343a63}.opt:hover{border-color:#ff5d8f}
+.q input[type=text]{background:#0d1022;color:#fff;border-color:#343a63}
+.q.benar{border-color:#2ec4a0}.q.salah{border-color:#e5484d}
+.benar .fb{color:#4ee0b5}.salah .fb{color:#ff7b80}
+.hasil{background:#151933}

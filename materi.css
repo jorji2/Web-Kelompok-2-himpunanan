@@ -1,0 +1,34 @@
+:root{--bg:#fffaf0;--ink:#2b2118;--rust:#a8431f;--card:#fff;--line:#e6d9c3}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;background:var(--bg);color:var(--ink);line-height:1.75}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:var(--ink);flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:5}
+.nav a{color:#fff;text-decoration:none;margin-left:18px;font-family:system-ui,sans-serif}
+.nav .brand{margin:0;font-weight:700;color:#f0c987}
+.layout{display:grid;grid-template-columns:250px 1fr;max-width:1150px;margin:auto}
+.side{position:sticky;top:52px;align-self:start;height:calc(100vh - 52px);overflow:auto;padding:24px 16px;border-right:1px solid var(--line);font-family:system-ui,sans-serif}
+.side h3{margin-bottom:10px}.side ul{list-style:none;padding:0}
+.side a{display:block;padding:6px 10px;color:var(--ink);text-decoration:none;border-left:3px solid transparent;font-size:.92rem}
+.side a.on{border-color:var(--rust);color:var(--rust);font-weight:700;background:#fbeee4}
+.doc{padding:30px 5vw 60px;max-width:780px}
+h1{font-size:2.4rem;margin-bottom:10px}
+section{padding:26px 0;border-bottom:1px solid var(--line);scroll-margin-top:60px}
+h2{color:var(--rust);margin-bottom:10px}h3{margin:16px 0 4px}
+p{margin-bottom:10px}ul{padding-left:22px;margin-bottom:10px}
+.ex{background:var(--card);border-left:4px solid #e0a15b;padding:8px 14px;border-radius:0 8px 8px 0}
+.f{font-family:"Cambria Math",Georgia,serif;font-size:1.1rem;background:#2b2118;color:#fff3dc;padding:8px 14px;border-radius:8px}
+table{border-collapse:collapse;width:100%;margin:8px 0 14px;background:var(--card)}
+td,th{border:1px solid var(--line);padding:7px 12px;text-align:left}td:first-child{font-weight:700;width:110px}
+th{background:#f4e6cf}
+.op{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 18px 14px;margin-bottom:14px}
+.figs svg{max-width:100%;height:auto;border:1px solid var(--line);background:#fff;margin:6px 8px 0 0}
+.next{display:inline-block;margin-top:24px;background:var(--rust);color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-family:system-ui}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.side{display:none}}
+
+/* ===== Tema gelap ===== */
+body{background:#0b0e17}.nav{background:#080b13!important;border-bottom:1px solid #232a45}
+body{--bg:#0e1018;--ink:#e6e2d9;--rust:#ff9f6b;--card:#171a26;--line:#2b2f43;background:#0e1018;color:#e6e2d9}
+.side a.on{background:#2a1f1a}.side a{color:#c9c5bb}
+.ex{background:#171a26;border-left-color:#ff9f6b}
+.f{background:#07080d;color:#ffd9b8;border:1px solid #2b2f43}
+th{background:#222638}.next{color:#0e1018;background:#ff9f6b}
+.figs svg{border-color:#2b2f43}
